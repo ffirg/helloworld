@@ -1,7 +1,7 @@
-FROM centos
+FROM fedora
 MAINTAINER Phil Griffiths phil@redhat.com
 LABEL Description="Test install of runtime.js under QEMU within OSE!"
-RUN yum -y install qemu npm
+RUN yum -y install nodejs npm qemu
 RUN git clone https://github.com/ffirg/helloworld
 RUN cd helloworld 
 RUN npm install
